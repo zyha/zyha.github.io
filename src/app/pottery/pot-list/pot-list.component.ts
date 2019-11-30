@@ -20,8 +20,6 @@ export class PotListComponent implements OnInit {
   ){}
 
   ngOnInit() {
-
-    console.log(this.selectedId);
     this.kiln$ = this.route.paramMap.pipe(
       switchMap(params => {
         return this.service.getKiln();
