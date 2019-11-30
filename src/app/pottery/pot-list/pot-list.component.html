@@ -1,0 +1,16 @@
+<ul class="side-nav">
+  <li *ngFor="let pots of kiln$ | async"
+     routerLinkActive="selected">
+    <a [routerLink]="[pots.name]">
+      <span>{{ pots.name }}</span>
+    </a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+
+<!--
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

@@ -1,0 +1,233 @@
+/* Global Styles */
+
+* {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #767676;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  background:url("assets/icons/bg.png") #92c2d6;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}
+
+p {
+  font-size: 14px;
+}
+
+/* Hyperlink */
+
+a {
+  cursor: pointer;
+  color: #4b86b4;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Input */
+
+input {
+  font-size: 14px;
+  border-radius: 2px;
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #BDBDBD;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-transform: uppercase;
+}
+
+/* Button */
+
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #2a4d69;
+  color: white;
+  border: none;
+  text-align: center;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+/* Checkout Cart, Shipping Prices */
+
+.cart-item, .shipping-item {
+  min-width: 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 32px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+
+/* Top Navigation Bar */
+/* Top Bar */
+#navigation {
+  background: url(app/top-bar/icons/compass_bg.png) 0px 0px;
+  background-repeat: no-repeat;
+  background-position: -0px -15px;
+  display: block;
+  position: fixed;
+  top:0px;
+  left:0px;
+  height: 200px;
+  width: 200px;
+  padding: 0px;
+  z-index: 2;
+  margin: 0px;
+}
+
+app-top-bar a h1{
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#compass a:hover h1{
+  color: #2a4d69;
+  text-shadow: 1px 1px 2px #fff, 1px 1px 5px #fff;
+}
+
+.material-icons{
+  color:white;
+}
+#compass a:hover .material-icons{
+  color: #2a4d69;
+  text-shadow: 1px 1px 2px #fff, 1px 1px 5px #fff;
+}
+
+#compass {
+  background-repeat: no-repeat;
+  background-position: -0px -15px;
+}
+
+#compass .compass_needle {
+  background: transparent;
+  z-index: 2;
+  position: fixed;
+  display: block;
+  width: 200px;
+  height: 200px;
+  -webkit-transition: 300ms ease all;
+  -moz-transition: 300ms ease all;
+  -o-transition: 300ms ease all;
+  transition: 300ms ease all;
+  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  /* IE 9 */
+  -webkit-transform-origin: 50% 50%;
+  /* Safari 3-8 */
+  transform-origin: 50% 50%;
+}
+
+#compass .navlinks {
+  position: fixed;
+  z-index: 2;
+}
+#compass #home_link {
+  top: 0px;
+  left: 80px;
+}
+#compass #photo_link {
+  top: 90px;
+  left: 140px;
+}
+#compass #pottery_link {
+  top: 90px;
+  left: 0px;
+}
+#compass #cart_link {
+  top: 180px;
+  left: 90px;
+}
+
+
+/* Side Navigation Bar */
+.side-nav {
+  position:fixed;
+  top: 230px;
+  left: 10px;
+  width: 85px;
+  text-align: right;
+  margin:0px;
+  padding:0px;
+  padding-right: 12px;
+  font-size:13px;
+}
+.side-nav li {
+    display:block;
+    list-style: none;
+    margin-top:2px;
+}
+.side-nav li span{
+    color: #fff;
+}
+.side-nav li:after {
+    display: inline-block;
+    background:#fff;
+    width:8px;
+    height:8px;
+    border-radius: 50px;
+    content:'';
+    position: absolute;
+    right: 0;
+    margin-top:3px;
+}
+
+.side-nav li:hover span{
+  color: #2a4d69; /* TODO */
+}
+.side-nav li:hover::after {
+  background: #2a4d69; /* TODO */
+}
+
+.side-nav li.selected span{
+  color: #2a4d69; /* TODO */
+}
+.side-nav li.selected::after {
+  background: #2a4d69; /* TODO */
+}
+
+.side-nav li.selected:hover {
+  background-color: #BBD8DC;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

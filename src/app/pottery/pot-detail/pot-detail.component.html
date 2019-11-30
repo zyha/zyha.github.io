@@ -1,0 +1,34 @@
+<!--Add custom template to image items-->
+
+
+<div class="tiles" gallerize="gal" [style.width.px]="screenWidth - 190" *ngIf="pots">
+	<div class="tile" *ngFor="let pot of pots">
+		<div class="column_1">
+
+			<img [src]="pot.src" [attr.imageSrc]="pot.src" [attr.thumbSrc]="pot.src">
+
+			<h3>
+				{{ pot.name }}
+			</h3>
+			<h4>
+				{{ pot.date }} {{ pot.type }}
+			</h4>
+			<p>
+				{{ pot.description }}
+			</p>
+		</div>
+
+		<div class="column_2">
+			<h5 class="potterystatus" *ngIf="available(pot)!=0">
+				{{ pot.price | currency }}
+				<a [title]="'You can buy it for $ '+ pot.price + '.'" (click)="addToCart(pot)">
+					Add to My Cart.
+				</a>
+			</h5>
+			<button (click)="share()">
+				Share
+			</button>
+		</div>
+
+	</div>
+</div>

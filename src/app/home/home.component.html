@@ -1,0 +1,24 @@
+<gallery id="homegallery"
+         [thumbTemplate]="thumbTemplate"
+         [autoPlay]="true"
+         [loop]="true"
+         [playerInterval]="5000"
+         [thumbWidth]="200"
+         [style.width.px]="screenWidth-5"
+         [style.height.px]="screenHeight-20"
+         fluid
+         >
+       </gallery>
+<ng-template #thumbTemplate
+             let-index="index"
+             let-type="type"
+             let-data="data"
+             let-currIndex="currIndex">
+  <span *ngIf="type === 'image' && index === currIndex"
+        class="item-active" >
+  </span>
+</ng-template>
+
+<div class="side-nav" id="intro">
+  <p>Hi</p>
+</div>

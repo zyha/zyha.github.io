@@ -1,0 +1,35 @@
+<h2>Cart</h2>
+<div class="cart-list" *ngIf="items.length>0">
+	<div class="cart-item" *ngFor="let item of items, index as itemId">
+		<span>{{ item.name }}</span>
+		<span>{{ item.price | currency }}</span>
+    <a [title]="'Remove this item from Cart'" (click)="removeFromCart(item, itemId)">Remove</a>
+	</div>
+
+	<form [formGroup]="checkoutForm"
+	(ngSubmit)="onSubmit(checkoutForm.value)">
+	<div>
+	    <label for="name">
+	      Name
+	    </label>
+	    <input id="name" type="text" formControlName="name">
+	  </div>
+
+	  <div>
+	    <label for="address">
+	      Address
+	    </label>
+	    <input id="address" type="text" formControlName="address">
+	  </div>
+
+	  <button class="button" mat-raised-button
+	  matTooltip="Send a message to Jess for your intention to buy."
+	   aria-label="Button that displays a tooltip in various positions" type="submit">Message Seller</button>
+
+
+	</form>
+
+</div>
+<div class="cart-list" *ngIf="!items.length">
+	Your cart is empty.
+</div>
