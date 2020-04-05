@@ -1611,7 +1611,7 @@ __webpack_require__.r(__webpack_exports__);
 let PhotosService = class PhotosService {
     constructor(httpClient) {
         this.httpClient = httpClient;
-        this.TABLE_URL = "http://zyha.tk/a/get-table.php";
+        this.TABLE_URL = "https://zyha.tk/a/get-table.php";
     }
     getAlbum() {
         return this.httpClient.get(this.TABLE_URL, {

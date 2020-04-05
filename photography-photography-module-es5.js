@@ -2402,7 +2402,7 @@
     let PhotosService = class PhotosService {
       constructor(httpClient) {
         this.httpClient = httpClient;
-        this.TABLE_URL = "http://zyha.tk/a/get-table.php";
+        this.TABLE_URL = "https://zyha.tk/a/get-table.php";
       }
 
       getAlbum() {
