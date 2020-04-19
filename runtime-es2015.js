@@ -64,7 +64,7 @@
 /******/
 /******/ 	// script path function
 /******/ 	function jsonpScriptSrc(chunkId) {
-/******/ 		return __webpack_require__.p + "" + ({"photography-photography-module":"photography-photography-module","pottery-pottery-module":"pottery-pottery-module"}[chunkId]||chunkId) + "-es2015.js"
+/******/ 		return __webpack_require__.p + "" + ({"default~photography-photography-module~pottery-pottery-module":"default~photography-photography-module~pottery-pottery-module","photography-photography-module":"photography-photography-module","pottery-pottery-module":"pottery-pottery-module"}[chunkId]||chunkId) + "-es2015.js"
 /******/ 	}
 /******/
 /******/ 	// The require function
